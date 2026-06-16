@@ -1,0 +1,25 @@
+app = "hermes-agent-educatedluciferrsb"  # CHANGE THIS - unique hona chahiye
+primary_region = "sin"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  HERMES_UID = "10000"
+  HERMES_GID = "10000"
+
+[[mounts]]
+  source = "hermes_data"
+  destination = "/opt/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
