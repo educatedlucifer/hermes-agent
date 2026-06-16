@@ -2,7 +2,7 @@ services:
   - type: web
     name: hermes-agent
     runtime: docker
-    plan: starter  # $7/mo, no sleep
+    plan: free  # $7/mo, no sleep
     dockerfilePath: ./Dockerfile
     envVars:
       - key: OPENAI_API_BASE
