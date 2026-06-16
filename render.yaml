@@ -13,8 +13,5 @@ services:
         value: zai-org/GLM-5.1-FP8
       - key: HERMES_TERMINAL_BACKEND
         value: docker
-    disk:
-      name: hermes-data
-      mountPath: /root/.hermes
-      sizeGB: 1
+    
     healthCheckPath: /  # agar web endpoint nahi hai to remove karo
